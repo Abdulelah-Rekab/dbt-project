@@ -1,0 +1,50 @@
+[0m14:42:40.170124 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000263D39DD7F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000263D528D590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000263D5983D90>]}
+
+
+============================== 14:42:40.177566 | ea8eca30-4507-44f3-be4d-81dbc597d357 ==============================
+[0m14:42:40.177566 [info ] [MainThread]: Running with dbt=1.11.8
+[0m14:42:40.178385 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\NewUser\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init rekab_sandbox', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m14:42:40.401566 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\NewUser\.dbt
+[0m14:42:40.415460 [debug] [MainThread]: Starter project path: C:\Users\NewUser\Desktop\DX-Sandbox\dbt-env\Lib\site-packages\dbt\include\starter_project
+[0m14:42:40.461798 [info ] [MainThread]: 
+Your new dbt project "rekab_sandbox" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:42:40.462852 [info ] [MainThread]: Setting up your profile.
+[0m14:43:32.752604 [info ] [MainThread]: Profile rekab_sandbox written to C:\Users\NewUser\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m14:43:32.755652 [debug] [MainThread]: Command `dbt init` succeeded at 14:43:32.755485 after 52.81 seconds
+[0m14:43:32.756014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000263F0E589D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000263F0EBAE70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000263F0F00270>]}
+[0m14:43:32.756337 [debug] [MainThread]: Flushing usage events
+[0m14:43:33.740896 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:41:49.365036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002072BAED940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002072D3B5450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002072DAAFD90>]}
+
+
+============================== 10:41:49.370342 | 68b81388-c83f-4dae-a49a-62047ef6020b ==============================
+[0m10:41:49.370342 [info ] [MainThread]: Running with dbt=1.11.8
+[0m10:41:49.371002 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\NewUser\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run --select stg_requests', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m10:41:49.371437 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\NewUser\Desktop\DX-Sandbox\de-learning\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m10:41:49.372232 [debug] [MainThread]: Command `dbt run` failed at 10:41:49.372114 after 0.11 seconds
+[0m10:41:49.372540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002072DAF6EA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002072DB369F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002072D947680>]}
+[0m10:41:49.372851 [debug] [MainThread]: Flushing usage events
+[0m10:41:50.335397 [debug] [MainThread]: An error was encountered while trying to flush usage events
+{"data":{"log_version":3,"version":"=2.0.0-preview.171"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019d9133-5a31-7953-b276-fad84d0aa352","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.171","name":"MainReportVersion","pid":30848,"thread":"tokio-rt-worker","ts":"2026-04-15T12:52:35.016287Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\NewUser\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019d9133-5a31-7953-b276-fad84d0aa352","level":"debug","msg":"running dbt-fusion with argumets {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":30848,"thread":"tokio-rt-worker","ts":"2026-04-15T12:52:35.016330Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019d9133-5a31-7953-b276-fad84d0aa352","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":30848,"thread":"tokio-rt-worker","ts":"2026-04-15T12:52:35.024540Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019d9133-5a31-7953-b276-fad84d0aa352","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":30848,"thread":"tokio-rt-worker","ts":"2026-04-15T12:52:35.025995Z"}}
+{"data":{"completed_at":"2026-04-15T12:52:35.565978Z","elapsed":0.5528973937034607,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019d9133-5a31-7953-b276-fad84d0aa352","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [552ms]","name":"CommandCompleted","pid":30848,"thread":"tokio-rt-worker","ts":"2026-04-15T12:52:35.567173Z"}}

@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: Requests
+    columns:
+      - name: request_id
+        tests:
+          - unique
+          - not_null
+      - name: request_status
+        tests:
+          - accepted_values:
+              values:
+                - 'Completed'
+                - 'Cancelled'
+                - 'No-Showed'
+                - 'Seat Unavailable'
+                - 'Not Accepted'
+      - name: rider_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_riders')
+              field: rider_id

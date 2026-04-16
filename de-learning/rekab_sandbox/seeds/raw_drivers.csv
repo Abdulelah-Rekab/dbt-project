@@ -1,0 +1,8 @@
+driver_id,first_name,last_name,is_active,vehicle_id,account_created_date,geo_city
+2001,Hamza,Al-Zahrani,True,3001,2023-06-01,DHR
+2002,Majed,Al-Ahmadi,True,3002,2023-08-15,DHR
+2003,Nawaf,Al-Dossary,True,3003,2024-01-10,RYD
+2004,Bandar,Al-Subaie,True,3004,2024-03-20,DHR
+2005,Saleh,Al-Khaldi,False,3005,2024-06-01,RYD
+2006,Rakan,Al-Enazi,True,3006,2024-09-15,DHR
+2007,Mishal,Al-Tamimi,True,3007,2025-01-05,RYD
