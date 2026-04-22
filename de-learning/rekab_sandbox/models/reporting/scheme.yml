@@ -10,15 +10,17 @@ models:
       - name: request_status
         tests:
           - accepted_values:
-              values:
-                - 'Completed'
-                - 'Cancelled'
-                - 'No-Showed'
-                - 'Seat Unavailable'
-                - 'Not Accepted'
+              arguments:
+                values:
+                  - 'Completed'
+                  - 'Cancelled'
+                  - 'No-Showed'
+                  - 'Seat Unavailable'
+                  - 'Not Accepted'
       - name: rider_id
         tests:
           - not_null
           - relationships:
-              to: ref('stg_riders')
-              field: rider_id
+              arguments:
+                to: ref('stg_riders')
+                field: rider_id

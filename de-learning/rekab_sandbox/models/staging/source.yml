@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+ - name: via_prod
+   database: dx-sandbox-492810
+   schema: dbt_dev
+   tables:
+    - name: raw_requests
+    - name: raw_riders
+    - name: raw_drivers
+    - name: raw_payments
+    - name: raw_riders_history

@@ -40,5 +40,5 @@ DATE(request_creation_time) AS day,
 DATE_TRUNC(CAST(request_creation_time AS TIMESTAMP), WEEK) AS week,
 DATE_TRUNC(CAST(request_creation_time AS TIMESTAMP), MONTH) AS month,
 DATE_TRUNC(CAST(request_creation_time AS TIMESTAMP), YEAR) AS year
-FROM {{ ref('raw_requests') }}
+FROM {{ source('via_prod', 'raw_requests') }}
 WHERE request_id IS NOT NULL

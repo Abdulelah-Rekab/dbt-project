@@ -7,5 +7,5 @@ COALESCE(payment_method, 'Unknown') AS payment_method,
 COALESCE(payment_status, 'Unknown') AS payment_status,
 CAST(amount AS FLOAT64) AS amount,
 COALESCE(geo_city, 'Unknown') AS geo_city
-FROM {{ ref('raw_payments') }}
+FROM {{ source('via_prod','raw_payments') }}
 WHERE ride_id IS NOT NULL

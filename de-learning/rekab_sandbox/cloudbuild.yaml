@@ -1,0 +1,20 @@
+steps:
+  - name: 'us-central1-docker.pkg.dev/dx-sandbox-492810/dbt-pipeline/rekab_sandbox-dbt:latest'
+    args: ['deps']
+    env:
+      - 'DBT_PROFILES_DIR=/usr/app/dbt/profiles'
+
+  - name: 'us-central1-docker.pkg.dev/dx-sandbox-492810/dbt-pipeline/rekab_sandbox-dbt:latest'
+    args: ['seed', '--target', 'prod']
+    env:
+      - 'DBT_PROFILES_DIR=/usr/app/dbt/profiles'
+
+  - name: 'us-central1-docker.pkg.dev/dx-sandbox-492810/dbt-pipeline/rekab_sandbox-dbt:latest'
+    args: ['run', '--target', 'prod']
+    env:
+      - 'DBT_PROFILES_DIR=/usr/app/dbt/profiles'
+
+  - name: 'us-central1-docker.pkg.dev/dx-sandbox-492810/dbt-pipeline/rekab_sandbox-dbt:latest'
+    args: ['test', '--target', 'prod']
+    env:
+      - 'DBT_PROFILES_DIR=/usr/app/dbt/profiles'

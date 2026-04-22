@@ -1,3 +1,10 @@
+{{
+    config(
+        materialized = 'incremental',
+        unique_key = 'request_id'
+    )
+}}
+
 SELECT
 rq.request_id,
 rq.ride_id,
@@ -38,3 +45,7 @@ LEFT JOIN {{ ref('stg_riders') }} AS ri ON rq.rider_id = ri.rider_id
 LEFT JOIN {{ ref('stg_drivers') }} AS dr ON rq.driver_id = dr.driver_id
 LEFT JOIN {{ ref('stg_payments') }} AS p ON rq.ride_id = p.ride_id
 WHERE rq.request_id IS NOT NULL
+
+{% if is_incremental()%}
+    AND rq.request_creation_time >= (SELECT MAX(request_creation_time) FROM {{ this }})
+{% endif %}

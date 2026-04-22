@@ -10,7 +10,7 @@ CAST(account_created_date AS DATE) AS account_created_date,
 CAST(last_update_dt AS TIMESTAMP) AS last_update_dt,
 CAST(geo_city AS STRING) AS geo_city,
 ROW_NUMBER() OVER (PARTITION BY rider_id ORDER BY last_update_dt DESC) AS row_num
-FROM {{ ref('raw_riders_history') }}
+FROM {{ source('via_prod', 'raw_riders_history') }}
 WHERE rider_id IS NOT NULL
 )
 

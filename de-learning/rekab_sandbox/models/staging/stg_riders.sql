@@ -8,5 +8,5 @@ CAST(is_active AS BOOLEAN) AS is_active,
 CAST(account_created_date AS DATE) AS account_created_date,
 CAST(last_update_dt AS TIMESTAMP) AS last_updated_dt,
 CAST(geo_city AS STRING) AS geo_city
-FROM {{ ref('raw_riders') }}
+FROM {{ source('via_prod','raw_riders') }}
 WHERE rider_id IS NOT NULL
