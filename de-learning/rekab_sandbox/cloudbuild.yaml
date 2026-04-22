@@ -1,22 +1,27 @@
 steps:
   - name: 'us-central1-docker.pkg.dev/dx-sandbox-492810/dbt-pipeline/rekab_sandbox-dbt:latest'
+    dir: 'de-learning/rekab_sandbox'
     args: ['deps']
     env:
-      - 'DBT_PROFILES_DIR=/usr/app/dbt/profiles'
+      - 'DBT_PROFILES_DIR=/workspace/de-learning/rekab_sandbox/profiles'
 
   - name: 'us-central1-docker.pkg.dev/dx-sandbox-492810/dbt-pipeline/rekab_sandbox-dbt:latest'
+    dir: 'de-learning/rekab_sandbox'
     args: ['seed', '--target', 'prod']
     env:
-      - 'DBT_PROFILES_DIR=/usr/app/dbt/profiles'
+      - 'DBT_PROFILES_DIR=/workspace/de-learning/rekab_sandbox/profiles'
 
   - name: 'us-central1-docker.pkg.dev/dx-sandbox-492810/dbt-pipeline/rekab_sandbox-dbt:latest'
+    dir: 'de-learning/rekab_sandbox'
     args: ['run', '--target', 'prod']
     env:
-      - 'DBT_PROFILES_DIR=/usr/app/dbt/profiles'
+      - 'DBT_PROFILES_DIR=/workspace/de-learning/rekab_sandbox/profiles'
 
   - name: 'us-central1-docker.pkg.dev/dx-sandbox-492810/dbt-pipeline/rekab_sandbox-dbt:latest'
+    dir: 'de-learning/rekab_sandbox'
     args: ['test', '--target', 'prod']
     env:
-      - 'DBT_PROFILES_DIR=/usr/app/dbt/profiles'
+      - 'DBT_PROFILES_DIR=/workspace/de-learning/rekab_sandbox/profiles'
+
 options:
   logging: CLOUD_LOGGING_ONLY
