@@ -18,3 +18,5 @@ steps:
     args: ['test', '--target', 'prod']
     env:
       - 'DBT_PROFILES_DIR=/usr/app/dbt/profiles'
+options:
+  logging: CLOUD_LOGGING_ONLY
